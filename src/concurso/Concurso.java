@@ -1,7 +1,8 @@
 package concurso;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
+
+import concursantes.AlejandroD.*;
 
 public class Concurso {
 

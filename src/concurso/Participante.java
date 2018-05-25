@@ -3,7 +3,7 @@ package concurso;
 
 public abstract class Participante {
 	
-	byte[] resultado;
+	protected byte[] resultado;
 	
 	public void setResultado(byte[] a) {
 		this.resultado = a;
