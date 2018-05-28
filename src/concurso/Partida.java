@@ -2,6 +2,8 @@ package concurso;
 
 import java.util.Arrays;
 
+import AlejandroD.*;
+
 public class Partida {
 	/*
 	 * La clase Partida instancia una partida de maximo 200 intentos donde dos
@@ -76,7 +78,6 @@ public class Partida {
 		case "Nicolast":
 			jugador = new Nicolast();
 			break;
-		}
 		return jugador;
 	}
 	

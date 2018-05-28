@@ -1,4 +1,5 @@
-package concursantes.AlejandroD.utilities;
+package AlejandroD.utilities;
+
 /**
  * Interfaz para dibujar las fichas para la respuesta.
  * 
