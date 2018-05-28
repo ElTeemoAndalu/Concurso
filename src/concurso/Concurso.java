@@ -9,7 +9,7 @@ public class Concurso {
 	ArrayList<String> ganadores = new ArrayList<String>();
 
 	Concurso() {
-		participantes.add("Pablo");
+		participantes.add("concurso.pablo.Pablo");
 		participantes.add("Migue");
 		participantes.add("Salva");
 		participantes.add("AleDiaz");
