@@ -8,6 +8,7 @@ public class Partida {
 	 * jugadores juegan para adivinar el codigo contrario.
 	 *
 	 */
+	protected byte numRonda = 1;
 	private Participante jugador1;
 	private Participante jugador2;
 	private byte[] resultado1;
@@ -25,9 +26,58 @@ public class Partida {
 	/*
 	 * Instancia una partida
 	 */
-	Partida(Participante jugador1, Participante jugador2) {
-		this.jugador1 = jugador1;
-		this.jugador2 = jugador2;
+	Partida(String jugador1, String jugador2) {
+		this.jugador1=seleccionaJugadores(jugador1);
+		this.jugador2=seleccionaJugadores(jugador2);
+	}
+	
+	private Participante seleccionaJugadores(String participanteString) {
+		Participante jugador;
+		switch(participanteString) {
+		case "Pablo":
+			jugador = new Pablo();
+			break;
+		case "Migue":
+			jugador = new Migue();
+			break;
+		case "Salva":
+			jugador = new Salva();
+			break;
+		case "AleDiaz":
+			jugador = new AleDiaz();
+			break;
+		case "AleSanchez":
+			jugador = new AleSanchez();
+			break;
+		case "Ruben":
+			jugador = new Ruben();
+			break;
+		case "Jaime":
+			jugador = new Jaime();
+			break;
+		case "Adri":
+			jugador = new Adri();
+			break;
+		case "Ismael":
+			jugador = new Ismael();
+			break;
+		case "Esther":
+			jugador = new Esther();
+			break;
+		case "Lidia":
+			jugador = new Lidia();
+			break;
+		case "Lolo":
+			jugador = new Lolo();
+			break;
+		case "Maria":
+			jugador = new Maria();
+			break;
+		case "Nicolast":
+			jugador = new Nicolast();
+			break;
+		}
+		return jugador;
 	}
 	
 	public byte partidaDificil() {
@@ -71,9 +121,24 @@ public class Partida {
 			comprobarResultado(mejorCombinacionJugador2, resultado2);
 
 			// Dibujar
-
+			if (numRonda==1) {
+				System.out.print("     ");
+				dibujar(combinacionOcultaJugador2,null);
+				System.out.print("                 ");
+				dibujar(combinacionOcultaJugador1,null);
+				System.out.println();
+			}
+			try {
+				Thread.sleep(250);		// Milisegundos que tarda en pasar de ronda
+			}catch (InterruptedException e){
+				System.out.println();
+			}
+			System.out.printf("%3d  ",numRonda);
+			numRonda++;
 			dibujar(combinacionPropuestaJugador1, resultado2);
+			System.out.print("  ");
 			dibujar(combinacionPropuestaJugador2, resultado1);
+			System.out.println();
 			if (Arrays.equals(combinacionOcultaJugador1, combinacionPropuestaJugador2)
 					|| Arrays.equals(combinacionOcultaJugador2, combinacionPropuestaJugador1)) {
 				esGanador =  true;
@@ -143,15 +208,17 @@ public class Partida {
 		for (i = 0; i < 8; i++) {
 			System.out.printf("%s " + (char) 9209 + RESET, traducirColor(combinacion[i]));
 		}
-		System.out.printf(" | ");
-		for (i = 0; i < resultado[0]; i++) {
-			System.out.printf("%s " + (char) 9210 + RESET, traducirColor((byte) 10));
-		}
-		for (i = 0; i < resultado[1]; i++) {
-			System.out.printf("%s " + (char) 9210 + RESET, traducirColor((byte) 11));
-		}
-		for (i = resultado[0] + resultado[1]; i < 8; i++) {
-			System.out.printf("\u2298");
+		if (resultado!=null) {
+			System.out.printf(" | ");
+			for (i = 0; i < resultado[0]; i++) {
+				System.out.printf("%s " + (char) 9210 + RESET, traducirColor((byte) 10));
+			}
+			for (i = 0; i < resultado[1]; i++) {
+				System.out.printf("%s " + (char) 9210 + RESET, traducirColor((byte) 11));
+			}
+			for (i = resultado[0] + resultado[1]; i < 8; i++) {
+				System.out.printf("\u001B[37m" + "\u2298 " + RESET);
+			} 
 		}
 
 	}
@@ -212,7 +279,7 @@ public class Partida {
 			color = "\u001B[36m";
 			break;
 		case 6:
-			color = "\u001B[38;5;208mm";
+			color = "\u001B[38;5;208m";
 			break;
 		case 7:
 			color = "\u001B[90m";
@@ -224,10 +291,10 @@ public class Partida {
 			color = "\u001B[92m";
 			break;
 		case 10:
-			color = "\u001B[40m";
+			color = "\u001B[30m";
 			break;
 		case 11:
-			color = "\u001B[47m";
+			color = "\u001B[37m";
 			break;
 		}
 		return color;
