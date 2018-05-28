@@ -1,4 +1,5 @@
-package concursantes.AlejandroD.utilities;
+package AlejandroD.utilities;
+
 /**
  * Interfaz de dibujar para tablero.
  * 

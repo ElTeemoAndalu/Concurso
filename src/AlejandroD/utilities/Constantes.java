@@ -1,4 +1,4 @@
-package concursantes.AlejandroD.utilities;
+package AlejandroD.utilities;
 
 public final class Constantes {
 
