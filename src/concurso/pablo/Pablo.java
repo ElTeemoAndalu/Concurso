@@ -33,7 +33,7 @@ public class Pablo extends Participante {
 	private byte[] cambiarCombinacionByte(Combinacion combinacionAConvertir){
 		byte combinacion[]= new byte [8];
 		for(int i = 0;i<combinacion.length;i++){
-			combinacion[i]=cambiarColor(combinacionAConvertir.getCodigo()[i].getColor());
+			combinacion[i]= (byte) combinacionAConvertir.getCodigo()[i].getColor().ordinal();
 		}
 		return combinacion;
 	}
