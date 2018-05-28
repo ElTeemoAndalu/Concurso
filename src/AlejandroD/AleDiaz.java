@@ -1,9 +1,9 @@
-package concursantes.AlejandroD;
+package AlejandroD;
 
 import concurso.Participante;
-import static concursantes.AlejandroD.ModoDeJuego.*;
+import static AlejandroD.ModoDeJuego.*;
 
-public class AleD extends Participante {
+public class AleDiaz extends Participante {
 	private Jugador ia = new Maquina(DIFICIL);
 	
 	@Override
