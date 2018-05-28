@@ -2,8 +2,6 @@ package concurso;
 
 import java.util.*;
 
-import concursantes.AlejandroD.*;
-
 public class Concurso {
 
 	ArrayList<String> participantes = new ArrayList<String>();

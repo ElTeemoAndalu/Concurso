@@ -1,4 +1,4 @@
-package concursantes.AlejandroD;
+package AlejandroD;
 
 import java.util.Arrays;
 

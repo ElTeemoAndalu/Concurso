@@ -1,4 +1,4 @@
-package concursantes.AlejandroD;
+package AlejandroD;
 
 /**
  * Esta clase permite configurar la partida, mostrando menus.

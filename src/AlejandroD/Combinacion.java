@@ -1,7 +1,7 @@
-package concursantes.AlejandroD;
+package AlejandroD;
 
 import java.util.Arrays;
-import concursantes.AlejandroD.utilities.Dibujable;
+import AlejandroD.utilities.Dibujable;
 
 
 /**

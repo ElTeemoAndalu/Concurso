@@ -1,10 +1,10 @@
-package concursantes.AlejandroD;
+package AlejandroD;
 
 import java.util.LinkedList;
 
-import concursantes.AlejandroD.utilities.DibujableTablero;
+import AlejandroD.utilities.DibujableTablero;
 
-import static concursantes.AlejandroD.ModoDeJuego.*;
+import static AlejandroD.ModoDeJuego.*;
 /**
  * Esta clase contiene las combinaciones del jugador.
  * 

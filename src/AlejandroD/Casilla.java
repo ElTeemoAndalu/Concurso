@@ -1,8 +1,8 @@
-package concursantes.AlejandroD;
+package AlejandroD;
 
-import static concursantes.AlejandroD.utilities.Constantes.*;
+import static AlejandroD.utilities.Constantes.*;
 
-import concursantes.AlejandroD.utilities.DibujableFichaRespuesta;
+import AlejandroD.utilities.DibujableFichaRespuesta;
 
 /**
  * Esta clase almacena un color.
