@@ -1,7 +1,6 @@
 package concurso;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 public class Concurso {
 
@@ -9,7 +8,7 @@ public class Concurso {
 	ArrayList<String> ganadores = new ArrayList<String>();
 
 	Concurso() {
-		/*
+		//*
 		participantes.add("1");
 		participantes.add("2");
 		participantes.add("3");
@@ -26,7 +25,7 @@ public class Concurso {
 		participantes.add("14");
 		participantes.add("15");
 		participantes.add("16");//*/
-		//*
+		/*
 		participantes.add("Pablo");
 		participantes.add("Migue");
 		participantes.add("Salva");
