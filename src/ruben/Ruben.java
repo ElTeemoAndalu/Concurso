@@ -1,5 +1,7 @@
 package ruben;
 
+import concurso.Participante;
+
 public class Ruben extends Participante{
 
 	
