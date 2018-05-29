@@ -1,4 +1,4 @@
-package practica;
+package salva;
 
 /** 
  * Este enum contiene las distintas dificultades existentes con la cantidad de:

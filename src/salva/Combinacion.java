@@ -1,4 +1,4 @@
-package practica;
+package salva;
 
 /** 
  * Esta clase crea un array de casillas con el constructor de tipo int.

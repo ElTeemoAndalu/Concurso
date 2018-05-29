@@ -1,4 +1,4 @@
-package practica;
+package salva;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
