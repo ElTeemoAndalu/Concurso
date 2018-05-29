@@ -44,7 +44,7 @@ public class Partida {
 	
 	private Participante seleccionaJugadores(String participanteString) {
 		Participante jugador;
-		jugador = new Ismael();
+		jugador = new Pablo();
 		/*
 		switch(participanteString) {
 		case "Pablo":
@@ -159,7 +159,7 @@ public class Partida {
 			numRonda++;//*/
 			
 			
-			/*		TODAS LAS COMBINACIONES
+			//*		TODAS LAS COMBINACIONES
 			if (numRonda==1) {
 				System.out.print("     ");
 				dibujar(combinacionOcultaJugador2,null);
