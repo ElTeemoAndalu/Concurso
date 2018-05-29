@@ -2,6 +2,9 @@ package concurso;
 
 import java.util.Arrays;
 
+import esther.Esther;
+import migue.Migue;
+
 public class Partida {
 	/*
 	 * La clase Partida instancia una partida de maximo 200 intentos donde dos
