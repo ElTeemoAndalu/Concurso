@@ -1,4 +1,4 @@
-package practica;
+package salva;
 
 /** 
  * Esta clase almacena su tablero con la coreespondiente dificultad.

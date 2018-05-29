@@ -1,9 +1,6 @@
-package concurso;
+package salva;
 
-import practica.Casilla;
-import practica.Combinacion;
-import practica.Dificultad;
-import practica.Maquina;
+import concurso.Participante;
 
 public class Salva extends Participante{
 

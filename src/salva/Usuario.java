@@ -1,4 +1,4 @@
-package practica;
+package salva;
 
 /** 
  * Esta clase almacena su tablero con la coreespondiente dificultad.
@@ -9,7 +9,7 @@ package practica;
 
 import java.util.HashMap;
 
-import practica.Teclado.Intervalos;
+import salva.Teclado.Intervalos;
 
 public class Usuario extends Jugador{
 	

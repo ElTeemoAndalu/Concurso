@@ -1,13 +1,6 @@
-package practica;
+package salva;
 
-/** 
- * Esta clase almacena su tablero con la coreespondiente dificultad.
- * @author Salvador Foncubierta
- * @version 2.0
- * @since 1.0
- */
-
-import practica.Teclado.Intervalos;
+import salva.Teclado.Intervalos;
 
 public class Menu {
 	

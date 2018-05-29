@@ -1,4 +1,4 @@
-package practica;
+package salva;
 
 /** 
  * Esta interfaz implementa un método para que se impriman por pantalla diferentes clases.

@@ -1,4 +1,4 @@
-package practica;
+package salva;
 
 /** 
  * Esta clase almacena el color en un objeto casilla.

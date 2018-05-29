@@ -1,4 +1,4 @@
-package practica;
+package salva;
 
 public class Main {
 
