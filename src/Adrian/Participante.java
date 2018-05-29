@@ -1,5 +1,4 @@
-package concurso;
-
+package mastermind;
 
 public abstract class Participante {
 	
