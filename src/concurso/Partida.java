@@ -2,10 +2,12 @@ package concurso;
 
 import java.util.Arrays;
 
+import adrian.Adrian;
 import aleDiaz.AleDiaz;
 import aleSanchez.AleSanchez;
 import esther.Esther;
 import ismael.Ismael;
+import jaime.Jaime;
 import lidia.Lidia;
 import lolo.Lolo;
 import maria.Maria;
@@ -43,9 +45,8 @@ public class Partida {
 	}
 	
 	private Participante seleccionaJugadores(String participanteString) {
-		Participante jugador;
-		jugador = new Pablo();
-		/*
+		Participante jugador = null;
+		//*
 		switch(participanteString) {
 		case "Pablo":
 			jugador = new Pablo();
@@ -68,8 +69,8 @@ public class Partida {
 		case "Jaime":
 			jugador = new Jaime();
 			break;
-		case "Adri":
-			jugador = new Adri();
+		case "Adrian":
+			jugador = new Adrian();
 			break;
 		case "Ismael":
 			jugador = new Ismael();
@@ -134,7 +135,7 @@ public class Partida {
 			comprobarResultado(mejorCombinacionJugador2, resultado2);
 
 			// Dibujar
-			/*		SOLO LA ÚLTIMA COMBINACIÓN
+			//*		SOLO LA ÚLTIMA COMBINACIÓN
 			if (numRonda==1) {
 				System.out.print("     ");
 				dibujar(combinacionOcultaJugador2,null);
@@ -159,7 +160,7 @@ public class Partida {
 			numRonda++;//*/
 			
 			
-			//*		TODAS LAS COMBINACIONES
+			/*		TODAS LAS COMBINACIONES
 			if (numRonda==1) {
 				System.out.print("     ");
 				dibujar(combinacionOcultaJugador2,null);
@@ -178,7 +179,7 @@ public class Partida {
 			System.out.print("  ");
 			dibujar(combinacionPropuestaJugador2, resultado1);
 			System.out.println();//*/
-			//*
+			/*
 			if (Arrays.equals(combinacionOcultaJugador1, combinacionPropuestaJugador2)
 					|| Arrays.equals(combinacionOcultaJugador2, combinacionPropuestaJugador1)) {
 				esGanador =  true;

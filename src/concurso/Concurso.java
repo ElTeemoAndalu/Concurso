@@ -2,13 +2,15 @@ package concurso;
 
 import java.util.*;
 
+import adrian.Teclado;
+
 public class Concurso {
 
 	ArrayList<String> participantes = new ArrayList<String>();
 	ArrayList<String> ganadores = new ArrayList<String>();
 
 	Concurso() {
-		//*
+		/*
 		participantes.add("1");
 		participantes.add("2");
 		participantes.add("3");
@@ -25,7 +27,7 @@ public class Concurso {
 		participantes.add("14");
 		participantes.add("15");
 		participantes.add("16");//*/
-		/*
+		//*
 		participantes.add("Pablo");
 		participantes.add("Migue");
 		participantes.add("Salva");
@@ -33,7 +35,7 @@ public class Concurso {
 		participantes.add("AleSanchez");
 		participantes.add("Ruben");
 		participantes.add("Jaime");
-		participantes.add("Adri");
+		participantes.add("Adrian");
 		participantes.add("Ismael");
 		participantes.add("Esther");
 		participantes.add("Lidia");
@@ -68,12 +70,14 @@ public class Concurso {
 				}
 			}
 		}
+		Teclado.nextLine();
 		do {
 			do {
 				if (participantes.size()==4&&ganadores.isEmpty()) {
 					System.out.println("-------------------------");
 					System.out.println("COMIENZAN LAS SEMIFINALES");
 					System.out.println("-------------------------\n");
+					Teclado.nextLine();
 					jugador1 = participantes.get(0);
 					jugador2 = participantes.get(1);
 					jugador3 = participantes.get(2);
@@ -88,10 +92,11 @@ public class Concurso {
 					ganador = combate.comprobarGanadorCombate(NUMRONDAS);
 					ganadores.add(ganador);
 					participantes.remove(ganador);
-						
+
 					System.out.println("-----------------");
 					System.out.println("COMIENZA LA FINAL");
 					System.out.println("-----------------\n");
+					Teclado.nextLine();
 					combate = new Combate(ganadores.get(0),ganadores.get(1));
 					ganador = combate.comprobarGanadorCombate(NUMRONDAS);
 					if (ganador == ganadores.get(0)) {
@@ -104,6 +109,7 @@ public class Concurso {
 					System.out.println("-------------------");
 					System.out.println("MATANZA POR LOS 10€");
 					System.out.println("-------------------\n");
+					Teclado.nextLine();
 					combate = new Combate(participantes.get(0),participantes.get(1));
 					podio[2] = combate.comprobarGanadorCombate(NUMRONDAS);
 					
