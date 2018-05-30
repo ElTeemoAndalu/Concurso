@@ -156,33 +156,40 @@ public class Maquina extends Usuario{
 	 */
 	private Combinacion colocarCombinacionRandom() {
 		byte numero;
+		byte casilla;
 		boolean aparece=false;
 		boolean colorActual;
 		boolean colorRepetido;
 		boolean almacenarColores[]=new boolean[dificultad.getNumColores()];
 		Combinacion combinacion=new Combinacion(new Ficha[dificultad.getNumCasillas()]);
 		Random rnd=new Random();
-		Random casilla=new Random();
 		for (byte i=0;i<dificultad.getNumCasillas();i++) {		// Recorremos la combinación
-			if (!dificultad.isRepeticionColores()) {
-				do {
-					colorRepetido=false;									//---- Comprobamos que el
-					numero=(byte)rnd.nextInt(dificultad.getColores().length);	// color no salga repetido
-					colorActual=almacenarColores[numero];						// si no se permite la
-					if (colorActual)											// repetición de colores.
-						colorRepetido=true;										//
-					else														//
-						almacenarColores[numero]=true;							//
-				}while (colorRepetido);											// ---------¬¬
-				combinacion.getCombinacion()[i]=new Ficha(dificultad.getColores()[numero]);	// Creamos la ficha
-			}else { 	// Si la repetición de colores se permite simplemente creamos la ficha
-				combinacion.getCombinacion()[i]=new Ficha(dificultad.getColores()[rnd.nextInt(dificultad.getNumColores())]);
+			do {
+				colorRepetido=false;									//---- Comprobamos que el
+				numero=(byte)rnd.nextInt(dificultad.getColores().length);	// color no salga repetido
+				colorActual=almacenarColores[numero];						// si no se permite la
+				if (colorActual)											// repetición de colores.
+					colorRepetido=true;										//
+				else														//
+					almacenarColores[numero]=true;							//
+			}while (colorRepetido);											// ---------¬¬
+			combinacion.getCombinacion()[i]=new Ficha(dificultad.getColores()[numero]);	// Creamos la ficha
+			if (dificultad.isRepeticionColores()) {
 				if (i==dificultad.getNumCasillas()-1) {
 					for (Ficha fco:combinacion.getCombinacion())
 						if (fco.getColorFicha()==dificultad.getColores()[dificultad.getNumColores()-1])
 							aparece=true;
-					if (!aparece)
-						combinacion.getCombinacion()[i-casilla.nextInt(dificultad.getNumCasillas())]=new Ficha(dificultad.getColores()[dificultad.getNumColores()-1]);
+					casilla = (byte)rnd.nextInt(dificultad.getNumCasillas());
+					if (!aparece) {
+						combinacion.getCombinacion()[i-casilla]=new Ficha(dificultad.getColores()[dificultad.getNumColores()-1]);
+					}
+					do {
+						casilla = (byte)rnd.nextInt(dificultad.getNumCasillas());
+					}while (combinacion.getCombinacion()[casilla].getColorFicha()==dificultad.getColores()[dificultad.getNumColores()-1]);
+					if (casilla%4==0) {
+						numero = (byte)rnd.nextInt(dificultad.getColores().length);
+						combinacion.getCombinacion()[i-casilla]=new Ficha(dificultad.getColores()[numero]);
+					}
 				}
 			}
 		}
